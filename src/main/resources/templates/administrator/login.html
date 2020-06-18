@@ -29,9 +29,14 @@
 <!-- ここから上を編集する必要はありません -->
 
 <!-- ここにモックのform要素を貼り付けます -->
-
-
-
+<h3>ログイン</h3><br>
+<span th:text="${message}"></span>
+<form th:action="@{/login}" th:object="${loginForm}" method="post">
+	メールアドレス：<br><input type="text" th:field="*{mailAddress}"><br>
+	パスワード:<br><input type="text" th:field="*{password}"><br><br>
+	<button>ログイン</button>
+</form>
+<br><a href="/toInsert">管理者登録はこちらから</a>
 <!-- ここから下を編集する必要はありません -->
 				</div>
 			</div>

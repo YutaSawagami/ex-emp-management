@@ -30,6 +30,13 @@
 <!-- ここから上を編集する必要はありません -->
 
 <!-- ここにモックのform要素を貼り付けます -->
+<h4>管理者登録</h4><h4>(システムにログインできる管理者を登録します)</h4>
+<form th:action="@{/insert}" th:object="${insertAdministratorForm}" method="post">
+名前:<br><input type="text" th:field="*{name}"><br>
+メールアドレス:<br><input type="text" th:field="*{mailAddress}"><br>
+パスワード:<br><input type="password" th:field="*{password}"><br>
+<button>登録</button>
+</form>
 
 
 <!-- ここから下を編集する必要はありません -->
